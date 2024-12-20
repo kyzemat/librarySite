@@ -1,0 +1,120 @@
+@font-face {
+    font-family: "kraft";
+    src: url("../fonts/kraft.otf") format("truetype");
+}
+
+box {
+    background-color: #3db2c8;
+    border-radius: 8px;
+    margin: 50px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: #ff6949;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+
+html {
+    height: 100%;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    width: auto\9; /* ie8 */
+    margin: 2px;
+}
+
+p {
+    font-family: kraft;
+    color: white;
+    font-size: 34pt;
+    margin: 0;
+}
+
+.back {
+    display: flex;
+    justify-content: flex-end;
+    flex-shrink: 0;
+}
+
+    .back img {
+        max-width: 100px;
+        transform: rotate(180deg);
+    }
+
+.login {
+    margin: 0;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 104px;
+}
+
+.username {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    margin: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+    .username input {
+        height: 30pt;
+        width: 300px;
+        font-family: kraft;
+    }
+
+a.button {
+    display: inline-block;
+    background: #fff;
+    color: #3db2c8;
+    width: 100%;
+    padding: 12px;
+    border-radius: 3px;
+    text-decoration: none;
+    text-align: center;
+    font-family: kraft;
+    font-size: 18px;
+    line-height: 1;
+    font-weight: 100;
+    margin: 2px;
+}
+
+div.new_form {
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+form button {
+    border: none;
+    display: inline-block;
+    background: #fff;
+    color: #3db2c8;
+    width: 100%;
+    padding: 12px;
+    border-radius: 3px;
+    text-decoration: none;
+    text-align: center;
+    font-family: kraft;
+    font-size: 18px;
+    line-height: 1;
+    font-weight: 100;
+    margin: 2px;
+    cursor:pointer;
+}

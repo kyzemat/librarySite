@@ -1,0 +1,73 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<link href="~/css/books.css" rel="stylesheet" />
+<header>
+    <ul>
+        <a href="Home">
+            <img src="../../img/library.png"
+                 alt="logo.png"
+                 style="max-width: 100px" />
+        </a>
+
+        <div class="header_div" style="width: 100%">
+            <div class="d1">
+                <form>
+                    <input type="text" placeholder="Искать здесь..." />
+                    <button type="submit">
+                        <img src="~/img/search.png"
+                             alt="search"
+                             style="margin: 0 auto" />
+                    </button>
+                </form>
+            </div>
+
+        <li>
+            <a class="button" href="Home">Главная</a>
+            <a class="button" href="books">Книги</a>
+            <a class="button" href="about">О нас</a>
+        </li>
+
+        </div>
+        <a href="login">
+            <img src="../../img/avatar.png"
+                 alt="logo.png"
+                 style="max-width: 100px" />
+        </a>
+    </ul>
+</header>
+
+
+<div class="content">
+    <div class="filter">
+        <p style="margin: 0 auto">Фильтры</p>
+        <p class="filter">id книги</p>
+    </div>
+    <div class="books_and_shit">
+        <div class="books">
+            @foreach (var book in Model)
+            {
+                                <div class="book">
+                    <div class="book_cover">
+                            <a asp-action="Details" asp-route-id="@book.book_id">
+                            <img class="book_image"
+                                         src="@book.path_to_book_cover"
+                                         alt="@book.name" />
+                        </a>
+                    </div>
+                                <a asp-action="Details" asp-route-id="@book.book_id"><p class="name">@book.name</p></a>
+                </div>
+            }
+        </div>
+        <div class="controls">
+            <a class="button_prev" href="home">
+                <img class="arrow" src="../../img/arrow.png" alt="prev" />
+            </a>
+            <div class="page">0</div>
+            <a class="button_next" href="home">
+                <img class="arrow" src="../../img/arrow.png" alt="next" />
+            </a>
+        </div>
+    </div>
+</div>
+

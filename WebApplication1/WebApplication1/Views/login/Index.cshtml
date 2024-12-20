@@ -1,0 +1,29 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<link href="~/css/login.css" rel="stylesheet" />
+<box>
+    <a class="back" href="home">
+        <img src="../../img/back.png" alt="back" />
+    </a>
+    <div class="login">
+        <div class="new_form">
+            <form method="post" asp-action="Index" asp-controller="Login">
+            <div class="username">
+                <p>Имя пользователя:</p>
+                <input type="text" id="username" name="username" required />
+            </div>
+            <div class="username">
+                <p>Пароль:</p>
+                <input type="password" id="password" name="password" required   />
+            </div>
+
+            <button type="submit">Авторизоваться</button>
+            
+            <a class="button" href="Registration">Регистрация</a>
+            </form>
+        </div>
+
+    </div>
+    </div>
+</box>

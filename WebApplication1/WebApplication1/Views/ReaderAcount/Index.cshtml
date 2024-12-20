@@ -1,0 +1,55 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<link href="~/css/acount.css" rel="stylesheet" />
+<header>
+    <ul>
+        <a href="home">
+            <img src="../../img/library.png"
+                 alt="logo.png"
+                 style="max-width: 100px" />
+        </a>
+
+        <div class="header_div" style="width: 100%">
+            <div class="d1">
+                <form>
+                    <input type="text" placeholder="Искать здесь..." />
+                    <button type="submit">
+                        <img src="../../img/search.png"
+                             alt="search"
+                             style="margin: 0 auto" />
+                    </button>
+                </form>
+            </div>
+
+        <li>
+            <a class="button" href="home">Главная</a>
+            <a class="button" href="books">Книги</a>
+            <a class="button" href="about">О нас</a>
+        </li>
+        </div>
+        <a href="login">
+            <img src="../../img/avatar.png"
+                 alt="logo.png"
+                 style="max-width: 100px" />
+        </a>
+    </ul>
+</header>
+
+<box>
+    <div class="login">
+        <div class="username">
+            <p>Имя пользователя: @Model.username</p>
+        </div>
+        <div class="username">
+            <p>Email: @Model.email</p>
+        </div>
+        <div class="username">
+            <p>Роль: @Model.role</p>
+        </div>
+        <form method="post" asp-controller="ReaderAcount" asp-action="Logout">
+            <div class="btn"><button type="submit">Выйти из аккаунта</button></div>
+        </form>
+    </div>
+    </div>
+</box>

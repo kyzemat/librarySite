@@ -1,0 +1,58 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<header>
+    <ul>
+        <a href="Home">
+            <img src="../../img/library.png"
+                 alt="logo.png"
+                 style="max-width: 100px" />
+        </a>
+
+        <div class="header_div" style="width: 100%">
+            <div class="d1">
+                <form>
+                    <input type="text" placeholder="Искать здесь..." />
+                    <button type="submit">
+                        <img src="~/img/search.png"
+                             alt="search"
+                             style="margin: 0 auto" />
+                    </button>
+                </form>
+            </div>
+
+        <li>
+            <a class="button" href="Home">Главная</a>
+            <a class="button" href="books">Книги</a>
+            <a class="button" href="about">О нас</a>
+        </li>
+
+        </div>
+        <a href="login">
+            <img src="../../img/avatar.png"
+                 alt="logo.png"
+                 style="max-width: 100px" />
+        </a>
+    </ul>
+</header>
+
+<link href="~/css/about.css" rel="stylesheet" />
+<box>
+    <div class="login">
+        <p class="text">
+            Мы публичная библиотека, предоставляющая доступ людям брать в аренду
+            книги за небольшую плату.
+        </p>
+        <p class="text">
+            На сайте представлены книги, которые есть в нашей библиотеке, их можно
+            забронировать, а после взять в прокат.
+        </p>
+        <p class="text_warn">Наша библиотека находится по адресу:</p>
+        <p class="text">
+            745500, Томская область, город Ступино, пер. Ладыгина, 88
+        </p>
+        <p class="text_warn">Контактный телефон:</p>
+        <p class="text">+7 (927) 307-52-22</p>
+    </div>
+</box>

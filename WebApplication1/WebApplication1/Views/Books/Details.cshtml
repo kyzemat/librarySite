@@ -1,0 +1,55 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<link href="~/css/book.css" rel="stylesheet" />
+<header>
+    <ul>
+        <a asp-controller="Home" asp-action="Index">
+            <img src="../../img/library.png"
+                 alt="logo.png"
+                 style="max-width: 100px" />
+        </a>
+        <div class="header_div" style="width: 100%">
+            <div class="d1">
+                <form>
+                    <input type="text" placeholder="Искать здесь..." />
+                    <button type="submit">
+                        <img src="../../img/search.png"
+                             alt="search"
+                             style="margin: 0 auto" />
+                    </button>
+                </form>
+            </div>
+
+        <li>
+            <a asp-controller="Home" asp-action="Index" class="button">Главная</a>
+            <a asp-controller="Books" asp-action="Index" class="button" >Книги</a>
+            <a asp-controller="about" asp-action="Index" class="button" >О нас</a>
+        </li>
+        </div>
+        <a asp-controller="Login" asp-action="Index">
+            <img src="../../img/avatar.png"
+                 alt="logo.png"
+                 style="max-width: 100px" />
+        </a>
+    </ul>
+</header>
+
+<div class="content">
+    <div class="cover">
+        <div class="book_container">
+            <img src="@Model.path_to_book_cover" alt="" />
+        </div>
+        <a asp-controller="Home" asp-action="Index" class="book_button" >Зарезервировать</a>
+        <a asp-controller="Home" asp-action="Index" class="book_button" >Назад</a>
+    </div>
+    <div class="nor" height="100%">
+        <div class="description"> <p class="text_describe">@Model.description</p></div>
+        <div class="describe">
+            <p class="text_describe" style="margin-top: 30px">id книги:  @Model.book_id</p>
+            <p class="text_describe">Название: @Model.name</p>
+            <p class="text_describe">isbn: @Model.isbn</p>
+            <p class="text_describe">Страниц: @Model.number_of_pages</p>
+        </div>
+    </div>
+</div>
